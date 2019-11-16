@@ -12,29 +12,29 @@ def function(vecX):
 #golden ratio implementation
 #we dont know the range for alpha so we choose arbitrary large range 
 def singleOpt(x, u):
-    leftBoarder = -100.0
-    rightBoarder = 100.0
+    leftBorder = -100.0
+    rightBorder = 100.0
 
-    alpha1 = leftBoarder + (rightBoarder-leftBoarder)*(1-0.618)
+    alpha1 = leftBorder + (rightBorder-leftBorder)*(1-0.618)
     alphaVal1 = (function(x + alpha1 * u))
-    alpha2 = leftBoarder + (rightBoarder-leftBoarder)*0.618
+    alpha2 = leftBorder + (rightBorder-leftBorder)*0.618
     alphaVal2 = function(x + alpha2 * u)
 
     while abs(alpha1 - alpha2) > 0.001:
         if alphaVal1 < alphaVal2:
-            rightBoarder = alpha2
+            rightBorder = alpha2
             alpha2 = alpha1
             alphaVal2 = alphaVal1
-            alpha1 = leftBoarder + (rightBoarder-leftBoarder)*(1-0.618)
+            alpha1 = leftBorder + (rightBorder-leftBorder)*(1-0.618)
             alphaVal1 = function(x + alpha1 * u)
         else:
-            leftBoarder = alpha1
+            leftBorder = alpha1
             alpha1 = alpha2
             alphaVal1 = alphaVal2
-            alpha2 = leftBoarder + (rightBoarder-leftBoarder)*(0.618)
+            alpha2 = leftBorder + (rightBorder-leftBorder)*(0.618)
             alphaVal2 = function(x + alpha2 * u)
 
-    return((alpha1+alpha2)/2)
+    return (alpha1+alpha2)/2
 
 
 if __name__ == "__main__":
