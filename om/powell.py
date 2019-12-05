@@ -1,3 +1,5 @@
+#CREATED BY JACEK GRZYBOWSKI AND RAFAŁ FIEDOSIUK
+
 import numpy as np
 from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
@@ -39,7 +41,7 @@ def singleOpt(x, u):
 
 if __name__ == "__main__":
 
-    x = np.matrix([[1.0],[3.0]])
+    x = np.matrix([[-0.9],[-0.9]])
     u = np.matrix([[1.0,0.0],[0.0,1.0]])
 
     pArr = [x,x,x]
@@ -48,8 +50,8 @@ if __name__ == "__main__":
     fig = plt.figure()
     ax = plt.axes(projection='3d')
 
-    xaxis = np.linspace(-1.0, 3.0, num=100)
-    yaxis = np.linspace(-1.0, 3.0, num=100)
+    xaxis = np.linspace(-1.0, 3.5, num=100)
+    yaxis = np.linspace(-1.0, 3.5, num=100)
 
     xaxis,yaxis = np.meshgrid(xaxis,yaxis)
 

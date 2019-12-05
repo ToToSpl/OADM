@@ -1,3 +1,5 @@
+#CREATED BY JACEK GRZYBOWSKI AND RAFAŁ FIEDOSIUK
+
 import numpy as np
 from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
@@ -49,8 +51,8 @@ if __name__ == "__main__":
     fig = plt.figure()
     ax = plt.axes(projection='3d')
 
-    xaxis = np.linspace(-1.0, 3.0, num=100)
-    yaxis = np.linspace(-1.0, 3.0, num=100)
+    xaxis = np.linspace(-1.0, 3.5, num=100)
+    yaxis = np.linspace(-1.0, 3.5, num=100)
 
     xaxis,yaxis = np.meshgrid(xaxis,yaxis)
 
