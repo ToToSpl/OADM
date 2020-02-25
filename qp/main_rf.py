@@ -144,6 +144,7 @@ if __name__ == '__main__':
     simplex_table = qpToLp(function_coefficients, inequalitiesLHS, inequalitiesRHS)
     #simplex_table = qpToLp(np.matrix([[1,1,0,-2,-2]]), np.matrix([[1,2,1,0],[2,3,0,1]]), np.matrix([[8, 2]]))
 
+    print('First simplex tableux:')
     print(pd.DataFrame(simplex_table))
     solution = solve_simplex_table(simplex_table)
     print(f"solved x matrix: {solution}\n")
